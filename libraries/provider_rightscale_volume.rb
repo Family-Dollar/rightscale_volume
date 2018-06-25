@@ -887,6 +887,8 @@ class Chef
           # node_id 7 is reserved for the controller
           controller_type = @current_resource.options[:controller_type]
           ["#{controller_type}(0:7)", "#{controller_type}(1:7)", "#{controller_type}(2:7)", "#{controller_type}(3:7)"]
+        when 'ec2'
+          ["nvme0n1", "nvme0n1p1", "nvme0n1p2"]
         else
           []
         end
